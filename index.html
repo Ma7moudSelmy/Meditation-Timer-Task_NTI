@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meditation Timer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- Timer display -->
+    <section class="timer-section">
+      <div id="timer-display">00:00</div>
+    </section>
+
+    <!-- Controls -->
+    <section class="controls">
+      <button id="start-btn" type="button">Start</button>
+      <button id="pause-btn" type="button" disabled>Pause</button>
+      <button id="stop-btn" type="button" disabled>Stop</button>
+    </section>
+
+    <!-- Sound selection -->
+    <section class="sound-section">
+      <h2 class="sound-title">Meditation Sounds</h2>
+
+      <ul class="sound-list">
+        <li>
+          <label>
+            <input type="radio" name="sound" value="assets/sounds/bell-ringing-05.mp3" checked />
+            Meditation Bell
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="sound" value="assets/sounds/ocean-wave-1.mp3" />
+            Ocean Waves
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="sound" value="assets/sounds/mixkit-forest-birds-ambience-1210.wav" />
+            Forest Ambience
+          </label>
+        </li>
+      </ul>
+
+      <div class="sound-controls">
+        <button id="play-sound" type="button">Play Sound</button>
+        <button id="stop-sound" type="button" disabled>Stop Sound</button>
+
+        <label class="duration-label">
+          Duration (minutes):
+          <input id="duration-input" type="number" min="1" max="120" value="10" />
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
